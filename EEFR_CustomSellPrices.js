@@ -163,7 +163,7 @@ Game_Interpreter.prototype.pluginCommand = function(command, args) {
 	// Plugin Command CustomSellBonus +/-/=X%
 	if (command === 'CustomSellBonus') {
 		// Check the format of the argument.
-		if (args[0].match(/([+]|[-]|[=])(\d+)%?/)) {
+		if (args[0].match(/([+=-]?)(\d+)%?))/) {
 			// If the format is +X%, add the value to the current bonus.
 			if (RegExp.$1 === '+') {
 				EdEngineFR.Temp.CSP_CommandBonus += Number(RegExp.$2);
@@ -171,7 +171,7 @@ Game_Interpreter.prototype.pluginCommand = function(command, args) {
 			} else if (RegExp.$1 === '-') {
 				EdEngineFR.Temp.CSP_CommandBonus -= Number(RegExp.$2);
 			// If the format is =X%, set the current bonus to the value given.
-			} else if (RegExp.$1 === '=') {
+			} else if (RegExp.$1 === '=') || (RegExp.$1 === '') {
 				EdEngineFR.Temp.CSP_CommandBonus = Number(RegExp.$2);
 			}
 		}
