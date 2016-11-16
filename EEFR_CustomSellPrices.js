@@ -2,7 +2,7 @@
  * ==============================================================================
  *  EEFR_CustomSellPrices.js
  * ==============================================================================
- * @plugindesc v1.1.0 A plugin for setting custom sell prices and modifying the default sell price.
+ * @plugindesc v1.1.1 A plugin for setting custom sell prices and modifying the default sell price.
  * @author FDSuprema - Ed Engine FR
  * ------------------------------------------------------------------------------
  *   
@@ -22,8 +22,8 @@
  * # Ed Engine FR - Custom Sell Prices                                          #
  * #============================================================================#                                                          
  * # Website: http://oldorenia.wordpress.com                                    #
- * # Last update: 11/11/16                                                      #
- * # Version: 1.1.0                                                             #
+ * # Last update: 11/16/16                                                      #
+ * # Version: 1.1.1                                                             #
  * #============================================================================#
  * # This plugin allows you to set the default sell percentage of items, armor, #
  * # and weapons as well as setting their sell price individually using a note  #
