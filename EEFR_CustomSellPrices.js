@@ -146,7 +146,7 @@ EdEngineFR.CustomSellPrices.getItemTags = function(item) {
 		item.noSellBonus = true;
 	  }
     }
-}
+};
 
 /*
 #=============================================================================#
@@ -163,7 +163,7 @@ Game_Interpreter.prototype.pluginCommand = function(command, args) {
 	// Plugin Command CustomSellBonus +/-/=X%
 	if (command === 'CustomSellBonus') {
 		// Check the format of the argument.
-		if (args[0].match(/([+=-]?)(\d+)%?/) {
+		if (args[0].match(/([+=-]?)(\d+)%?/)) {
 			// If the format is +X%, add the value to the current bonus.
 			if (RegExp.$1 === '+') {
 				EdEngineFR.Temp.CSP_CommandBonus += Number(RegExp.$2);
@@ -216,7 +216,7 @@ EdEngineFR.CustomSellPrices.getSellPrice = function(item) {
 		sellPrice = null;
 	}
 	return sellPrice;
-}
+};
 
 /*
 #=============================================================================#
@@ -243,7 +243,7 @@ EdEngineFR.CustomSellPrices.applyBonusPercentages = function(sellPrice) {
 	// tagBonus += EdEngineFR.CustomSellPrices.bonusTagsCheck();
 	bonus += Math.floor(((gameVariableBonus + cmdBonus + tagBonus) / 100) * sellPrice);
 	return sellPrice + bonus;
-}
+};
 
 /*
 #=============================================================================#
