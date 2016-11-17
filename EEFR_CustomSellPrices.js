@@ -156,14 +156,14 @@ EdEngineFR.CustomSellPrices.getItemTags = function(item) {
 #=============================================================================#
 */
 // Alias the original plugin commands for compatibility.
-EdEngineFR.Temp.pluginCommand = Game_Interpreter.prototype.pluginCommand;
+EdEngineFR.CustomSellPrices.pluginCommand = Game_Interpreter.prototype.pluginCommand;
 Game_Interpreter.prototype.pluginCommand = function(command, args) {
 	// Toss the original contents of the method back in here.
-    EdEngineFR.Temp.pluginCommand(this);
+    EdEngineFR.CustomSellPrices.pluginCommand.call(this, command, args);
 	// Plugin Command CustomSellBonus +/-/=X%
 	if (command === 'CustomSellBonus') {
 		// Check the format of the argument.
-		if (args[0].match(/([+=-]?)(\d+)%?))/) {
+		if (args[0].match(/([+=-]?)(\d+)%?/) {
 			// If the format is +X%, add the value to the current bonus.
 			if (RegExp.$1 === '+') {
 				EdEngineFR.Temp.CSP_CommandBonus += Number(RegExp.$2);
